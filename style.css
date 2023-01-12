@@ -1,0 +1,153 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  --lightGrey: rgb(244, 244, 244);
+  --white: rgb(255, 255, 255);
+  --danger: rgb(240, 28, 28);
+  --lime: rgb(28, 187, 28);
+
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--lightGrey);
+}
+
+.section__title {
+  text-align: center;
+}
+
+.container {
+  max-width: 90em;
+  margin: auto;
+}
+
+.container-px {
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container-pall {
+  padding: 3rem 2rem;
+}
+
+.hero {
+  background-color: var(--white);
+}
+
+.hero .container {
+  max-width: 70em;
+}
+
+.hero__title {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.hero__collection {
+  max-height: 13.65rem;
+  overflow-y: scroll;
+}
+
+.hero__book {
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 0.25fr;
+  border-bottom: solid 1px black;
+}
+
+.hero__book:nth-child(odd) {
+  background-color: white;
+}
+
+.hero__book:nth-child(even) {
+  background-color: var(--lightGrey);
+}
+
+.hero__book-remove {
+  padding: 0.5rem;
+  height: max-content;
+  align-self: center;
+  font-family: 'Ubuntu', sans-serif;
+  border: solid black;
+  color: var(--white);
+  background-color: black;
+  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
+    background-color 150ms ease-in-out;
+}
+
+.hero__book-remove:hover {
+  border-radius: 0.25rem;
+  background-color: var(--danger);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
+}
+
+.Form {
+  background-color: var(--grey);
+}
+
+.Form .container {
+  max-width: 25em;
+}
+
+.success-message {
+  color: var(--lime);
+}
+
+.form-input {
+  position: relative;
+}
+
+.form-input input {
+  font-family: 'Ubuntu', sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0;
+  border: solid 1px black;
+}
+
+.form-input:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.book-add {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: var(--white);
+  background-color: black;
+  border: solid 3px black;
+  border-radius: 0;
+  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
+    background-color 150ms ease-in-out;
+}
+
+.book-add:hover {
+  border-radius: 0.25rem;
+  background-color: var(--lime);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
+}
+
+.display {
+  display: block;
+}
+
+.close {
+  display: none;
+}

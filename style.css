@@ -12,6 +12,8 @@ html {
 body {
   --lightGrey: rgb(244, 244, 244);
   --white: rgb(255, 255, 255);
+  --darkGrey: rgb(36, 36, 36);
+  --black: rgb(19, 19, 19);
   --danger: rgb(240, 28, 28);
   --lime: rgb(28, 187, 28);
 
@@ -19,11 +21,8 @@ body {
   padding: 0;
   line-height: 1.4;
   font-family: 'Ubuntu', sans-serif;
-  background-color: var(--lightGrey);
-}
-
-.section__title {
-  text-align: center;
+  color: var(--darkGrey);
+  background-color: var(--black);
 }
 
 .container {
@@ -36,18 +35,81 @@ body {
   padding-left: 2rem;
 }
 
+.container-pall {
+  padding: 3rem 2rem;
+}
+
+.section {
+  background-color: var(--white);
+}
+
+.section .container {
+  height: 85vh;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--black);
+}
+
+.close {
+  display: none;
+}
+
 ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.container-pall {
-  padding: 3rem 2rem;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.hero {
-  background-color: var(--white);
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+}
+
+.nav,
+.nav__links,
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.nav__links {
+  gap: 1rem;
+}
+
+.nav__link {
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav__link:hover {
+  opacity: 0.8;
 }
 
 .hero .container {
@@ -60,7 +122,7 @@ ul {
 }
 
 .hero__collection {
-  max-height: 13.65rem;
+  height: 75%;
   overflow-y: scroll;
 }
 
@@ -68,7 +130,7 @@ ul {
   padding: 0 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr) 0.25fr;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px var(--black);
 }
 
 .hero__book:nth-child(odd) {
@@ -84,11 +146,11 @@ ul {
   height: max-content;
   align-self: center;
   font-family: 'Ubuntu', sans-serif;
-  border: solid black;
+  border: 0;
   color: var(--white);
-  background-color: black;
-  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
-    background-color 150ms ease-in-out;
+  background-color: var(--black);
+  cursor: pointer;
+  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out, background-color 150ms ease-in-out;
 }
 
 .hero__book-remove:hover {
@@ -97,12 +159,16 @@ ul {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
 }
 
-.Form {
-  background-color: var(--grey);
+.Form .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.Form .container {
-  max-width: 25em;
+.form__content {
+  width: 100%;
+  max-width: 30em;
+  margin: auto;
 }
 
 .success-message {
@@ -115,10 +181,10 @@ ul {
 
 .form-input input {
   font-family: 'Ubuntu', sans-serif;
-  padding: 0.5rem;
+  padding: 0.75rem;
   width: 100%;
   border-radius: 0;
-  border: solid 1px black;
+  border: solid 1px var(--black);
 }
 
 .form-input:not(:last-child) {
@@ -131,11 +197,10 @@ ul {
   padding: 0.5rem 1rem;
   font-family: 'Ubuntu', sans-serif;
   color: var(--white);
-  background-color: black;
-  border: solid 3px black;
+  background-color: var(--black);
+  border: 0;
   border-radius: 0;
-  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
-    background-color 150ms ease-in-out;
+  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out, background-color 150ms ease-in-out;
 }
 
 .book-add:hover {
@@ -144,10 +209,47 @@ ul {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
 }
 
-.display {
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact__description span {
   display: block;
 }
 
-.close {
-  display: none;
+.contact__details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact__detail li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.contact__link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--lightGrey);
+  transition: background-color 150ms ease-in-out, color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+
+.contact__link:hover {
+  color: var(--white);
+  background-color: var(--black);
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.18);
+}
+
+.footer {
+  color: var(--white);
+  background-color: var(--black);
+}
+
+.footer .container {
+  justify-content: center;
+  gap: 3rem;
 }

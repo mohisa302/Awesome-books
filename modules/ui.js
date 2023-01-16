@@ -25,8 +25,7 @@ export default class UserInterface {
 
   static bookAddSuccess() {
     const formTitle = document.querySelector('.section__title');
-    formTitle.innerHTML =
-      '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
+    formTitle.innerHTML = '<span class="success-message"><i class="fa-regular fa-circle-check"></i> New book added!</span>';
     setTimeout(() => {
       formTitle.innerHTML = 'Add new book';
     }, 2000);

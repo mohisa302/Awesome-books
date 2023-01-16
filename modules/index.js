@@ -1,7 +1,7 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
 import UserInterface, { booksContainer } from './ui.js';
-import { printDate } from './time.js';
+import printDate from './time.js';
 
 const navLinks = document.querySelectorAll('.nav__link');
 const addBookSection = document.querySelector('#add-book');

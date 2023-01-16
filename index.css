@@ -150,7 +150,9 @@ a {
   color: var(--white);
   background-color: var(--black);
   cursor: pointer;
-  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
+  transition:
+    border-radius 150ms ease-in-out,
+    box-shadow 150ms ease-in-out,
     background-color 150ms ease-in-out;
 }
 
@@ -201,7 +203,9 @@ a {
   background-color: var(--black);
   border: 0;
   border-radius: 0;
-  transition: border-radius 150ms ease-in-out, box-shadow 150ms ease-in-out,
+  transition:
+    border-radius 150ms ease-in-out,
+    box-shadow 150ms ease-in-out,
     background-color 150ms ease-in-out;
 }
 
@@ -237,7 +241,9 @@ a {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: var(--lightGrey);
-  transition: background-color 150ms ease-in-out, color 150ms ease-in-out,
+  transition:
+    background-color 150ms ease-in-out,
+    color 150ms ease-in-out,
     box-shadow 150ms ease-in-out;
 }
 

@@ -91,7 +91,7 @@ To clone this repository to your desired folder, follow the steps below:
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/Timbar09/Awesome-Books.git"
+  - Visit this link "https://github.com/mohisa302/Awesome-books.git"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button

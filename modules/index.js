@@ -1,15 +1,12 @@
 import Book from './book.js';
 import StoreBooks from './storage.js';
 import UserInterface, { booksContainer } from './ui.js';
-import { DateTime } from './luxon';
+import { printDate } from './time.js';
 
 const navLinks = document.querySelectorAll('.nav__link');
 const addBookSection = document.querySelector('#add-book');
 const contactSection = document.querySelector('#contact');
 const bookListSection = document.querySelector('#books-list');
-
-window.addEventListener('load', UserInterface.loadBooks);
-
 const form = document.querySelector('.form__content');
 
 form.addEventListener('submit', (e) => {
@@ -28,8 +25,6 @@ booksContainer.addEventListener('click', (e) => {
   UserInterface.removeBook(e.target);
   StoreBooks.removeBook(e.target);
 });
-
-document.addEventListener('DOMContentLoaded', Book.displayBooks);
 
 navLinks.forEach((link, index) => {
   link.addEventListener('click', () => {
@@ -54,3 +49,10 @@ navLinks.forEach((link, index) => {
     }
   });
 });
+
+window.addEventListener('load', () => {
+  UserInterface.loadBooks();
+  printDate();
+});
+
+document.addEventListener('DOMContentLoaded', Book.displayBooks);
